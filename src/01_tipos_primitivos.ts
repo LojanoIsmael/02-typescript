@@ -41,11 +41,8 @@ export function calcularPromedio(notas: readonly number[]): number {
   }
 
   let suma = 0;
-  for (let i = 0; i < notas.length; i++){
-    const nota = notas[i];
-    if (nota != undefined){
-      suma += nota;
-    }
+  for (const nota of notas){
+    suma= suma +nota;
   }
   return Number((suma / notas.length).toFixed(2));
 }
@@ -53,15 +50,12 @@ export function calcularPromedio(notas: readonly number[]): number {
 // ============================================================================
 // PASO 3: Formateador de Ficha Técnica
 // ============================================================================
-
 export function formatearFichaEstudiante(
   nombre: string,
   edad: number,
-  paralelo: "E1",
+  paralelo: "E1" | "E2",
   activo: boolean
 ): string {
-  let nombreMayus = nombre.toUpperCase();
-  let estado = activo ? "ACTIVO" : "INACTIVO";
-
-  return `[FICHA UETS] ${nombreMayus} (${edad} años) - Paralelo: ${paralelo} - Estado: ${estado}`;
+const estadoTexto = activo ? "MATRICULADO" : "RETIRADO";
+  return `[FICHA UETS] ${nombre.toUpperCase()} (${edad} años) - Paralelo: ${paralelo} - Estado: ${estadoTexto}`;
 }
