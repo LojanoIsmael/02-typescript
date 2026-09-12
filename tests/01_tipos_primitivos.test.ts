@@ -30,7 +30,7 @@ if (resumenActual && resumenActual.length > 0) {
   console.log("┌────────────────────────────────────────────────────────┐");
   console.log("│ 👤 RESUMEN DEL ESTUDIANTE EN CONSOLA                   │");
   console.log(`│ ${resumenActual.padEnd(54)} │`);
-  console.log("└────────────────────────────────────────────────────────┘\n");
+  console.log("└──────────────────────────────���─────────────────────────┘\n");
 }
 
 console.log("🔍 Verificando Paso 1: Tipos de Variables y Resumen...");
